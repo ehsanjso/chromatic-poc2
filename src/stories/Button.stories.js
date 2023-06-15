@@ -37,3 +37,19 @@ export const Small = {
     label: "Button",
   },
 };
+
+// src/components/Component.stories.tsx
+
+export const Snapshot = () => (
+  <>
+    <Primary />
+    <Secondary />
+    <Large />
+    <Small />
+  </>
+);
+Snapshot.parameters = {
+  // we disabled chromatic in .storybook/preview.tsx, so we need to
+  // un-disable it (double negatives are fun)
+  chromatic: { disableSnapshot: false },
+};
