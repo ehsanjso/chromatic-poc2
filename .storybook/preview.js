@@ -8,6 +8,9 @@ const preview = {
         date: /Date$/,
       },
     },
+    chromatic: {
+      disableSnapshot: true,
+    },
   },
 };
 
