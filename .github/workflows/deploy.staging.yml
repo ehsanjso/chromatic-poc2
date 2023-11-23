@@ -1,7 +1,5 @@
 name: Deploy Staging
 
-concurrency: platform-staging-deployment
-
 on:
   workflow_run:
     workflows: [Chromatic]
