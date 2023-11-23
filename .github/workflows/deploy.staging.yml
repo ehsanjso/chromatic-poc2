@@ -30,7 +30,7 @@ jobs:
       - name: Commit Action Status
         uses: LouisBrunner/checks-action@v1.1.1
         with:
-          sha: ${{ steps.sharef.outputs.sha }}
+          name: ${{ steps.sharef.outputs.sha }}
           token: ${{ secrets.GITHUB_TOKEN }}
       # - uses: actions/setup-node@v3
       #   with:
