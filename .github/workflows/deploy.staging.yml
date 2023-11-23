@@ -1,0 +1,21 @@
+name: Deploy Staging
+
+concurrency: platform-staging-deployment
+
+on:
+  workflow_run:
+    workflows: [Chromatic]
+    branch: [main]
+    types: [completed]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    # if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    steps:
+      - uses: actions/checkout@master
+      # - uses: actions/setup-node@v3
+      #   with:
+      #     node-version-file: ".nvmrc"
+      # - name: Run deploy script
+      #   run: sleep 300 # TODO: Replace with actual deploy script
